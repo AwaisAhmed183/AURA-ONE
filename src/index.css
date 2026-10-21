@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-ink: #0E0E0E;
+    --color-bone: #ECE7DF;
+    --color-orange: #FF4D00;
+    --color-steel: #8A8A85;
+    --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  html {
+    background-color: #0E0E0E;
+    color: #ECE7DF;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    max-width: 100%;
+    scroll-padding-top: 88px;
+  }
+
+  body {
+    background-color: #0E0E0E;
+    color: #ECE7DF;
+    overflow-x: hidden;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  section,
+  button,
+  input,
+  select,
+  textarea,
+  a,
+  [role="button"] {
+    scroll-margin-top: 88px;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 26s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Hard minimal industrial shadow */
+.hard-shadow {
+  box-shadow: 4px 4px 0px 0px #000000;
+}
+
+.hard-shadow-orange {
+  box-shadow: 4px 4px 0px 0px #FF4D00;
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0E0E0E;
+  border-left: 1px solid rgba(236, 231, 223, 0.12);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8A8A85;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF4D00;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-marquee {
+    animation: none !important;
+  }
+}
+
