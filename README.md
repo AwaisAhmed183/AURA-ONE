@@ -1,4 +1,5 @@
 # AURA ONE — Studio Kinetic
+**Live demo:** [https://aura-one-lac.vercel.app](https://aura-one-lac.vercel.app)
 
 An interactive 3D product launch website for **AURA ONE**, a premium wireless reference headphone by Studio Kinetic. Built as a concept project to demonstrate the standard of a modern product-launch site: real-time 3D, scroll-driven storytelling, and a working shopping experience — the same level of site a product brand would launch with.
 
